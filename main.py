@@ -15,13 +15,22 @@ def movie_info (movie_id):
 
 def title_search (keyword):
     ia = imdb.Cinemagoer()
-    print(type(ia))
+    movies = ia.search_movie(keyword)
+    for movie in movies:
+        print(movie)
 
 def director_search (director):
-    return
+    ia = imdb.Cinemagoer()
+    persons = ia.search_person(director)
+    for person in person:
+        personID = person.personID
 
 def year_search (year):
-    return
+    ia = imdb.Cinemagoer()
+    movies = ia.search_year(year)
+    # sort here
+    for movie in sorted_movies:
+        print(movie)
 
 def main():
     print("Options menu, for debugging only:")
