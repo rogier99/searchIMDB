@@ -9,13 +9,14 @@ The dataset provided by the library is also sound, and when using functions prov
 Whilst this is often not the case, creating a perfect piece of code is nearly impossible, it is out of my scope to account for them unless that becomes part of the project.
 
 # Tools
-I have yet to settle on tools.
+There are a few categories of tools to choice.
 
 ## Editor
 During university I often used vim to program.
 This editor does not provide auto complete or other fancy tools, but is very powerfull as almost any feature can be implemented and most importantly is supported on almost any device.
 For some assignments and especially duing corona using the terminal to program was often desired so vim was an excelent tool.
 If I were to use this more, one of the first things I would do is try and implement these features as they reduce the effective programming time and can provide hints for what functions are available and their application.
+It is more likely I will simply switch to another editor that provides auto complete amongst other features, but this is up to debate.
 
 ## Testing
 For my assignements the tests were always hand made, and executed.
