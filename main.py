@@ -10,27 +10,48 @@ def movie_info (movie_id):
     # Go over every element and print the content of these lists
     for dic in movie.infoset2keys:
         for item in movie.infoset2keys[dic]:
-            print(item)
+            print("\n" + str(item))
             print(movie.get(item))
 
 def title_search (keyword):
+    # Get the list of movies and find moves with given keyword
     ia = imdb.Cinemagoer()
     movies = ia.search_movie(keyword)
+
+    # Print the results
     for movie in movies:
         print(movie)
 
 def director_search (director):
+    # Get the list of directors that are similar to the given input
     ia = imdb.Cinemagoer()
     persons = ia.search_person(director)
-    for person in person:
-        personID = person.personID
+
+    # For every person, print the movies they directed
+    for person in persons:
+        print("Looking for movies from: " + str(person))
+        print(person.get('director'))
+
+def get_year(movie):
+    movie['year']
 
 def year_search (year):
     ia = imdb.Cinemagoer()
-    movies = ia.search_year(year)
-    # sort here
-    for movie in sorted_movies:
+    # Get the list of all the movies <= This part I cannot find anywhere, just get by id or keyword and executing ia.get_movie for every id will be really slow
+
+    # For every movie, look at the year (preferably looking from right to left (most movies start with either 1 or 2, the last two digits are more "unique") )
+    for i in range(0, reversed(len(movies) - 1)):
+        if movies[i]['year'] != year:
+            movies.pop(i)
+            
+    # Use sort the movies by ranking
+    movies.sort(key=get_year)
+
+    # Print the list
+    for movie in movies:
         print(movie)
+
+
 
 def main():
     print("Options menu, for debugging only:")
